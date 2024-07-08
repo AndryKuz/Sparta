@@ -5,12 +5,13 @@ import { AppRoutes } from "../Routes/AppRoutes";
 const App = () => {
     return (
         <div className='wrapper'>
-            <Header />
-
-            <div className='content'>
-                <AppRoutes />
+            <div className='container'>
+                <Header />
+                <div className='content'>
+                    <AppRoutes />
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 };
