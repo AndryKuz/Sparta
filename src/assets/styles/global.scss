@@ -1,0 +1,49 @@
+@use "sass:math";
+$mainColor:#ffff;
+
+$fontSize:toRem(16); 
+
+$fontFamily:'Montserrat';
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1200;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98); 
+$mobile: em(767.98); 
+$mobileSmall: em(479.98); 
+
+$responsiveType:1;
+
+
+  //          Wrapper
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    > main {
+      flex: 1 1 auto;
+    }
+  }
+  @if ($responsiveType==1) {
+    [class*="container"] {
+      @if ($maxWidthContainer>0) {
+        max-width: toRem($containerWidth);
+        margin: 0 auto;
+      }
+      @if ($containerPadding>0) {
+        @if ($maxWidthContainer>0) {
+          padding: 0 toRem(math.div($containerPadding, 2));
+        } @else {
+          @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+          @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+        }
+      }
+    }
+  } 
+  @import './null.scss';
+
