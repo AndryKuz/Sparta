@@ -1,13 +1,14 @@
 @use "sass:math";
 // @import url(./mixins.scss);
 @function toRem($px, $current: 16) {
-	$result: math.div($px, $current) + rem;
-	@return $result;}
-$mainColor:#ffff;
+    $result: math.div($px, $current) + rem;
+    @return $result;
+}
+$mainColor: #ffff;
 
-$fontSize:toRem(16); 
+$fontSize: toRem(16);
 
-$fontFamily:'Montserrat';
+$fontFamily: "Montserrat";
 
 $minWidth: 320;
 $maxWidth: 1920;
@@ -16,49 +17,49 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 $pc: em($containerWidth);
-$tablet: em(991.98); 
-$mobile: em(767.98); 
-$mobileSmall: em(479.98); 
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
 
-$responsiveType:1;
+$responsiveType: 1;
 
+@import "./null.scss";
 
-  //          Wrapper
-  .wrapper {
-    background-image: url('../images/bg.jpg') ;
+//          Wrapper
+.wrapper {
+    background-image: url("../images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    > main {
-      flex: 1 1 auto;
-    }
-    .container {
-      max-width: toRem($containerWidth);
-      margin: 0 auto;
-  
-      @if ($containerPadding > 0) {
-        padding: 0 toRem(math.div($containerPadding, 2));
-      }
-    }
-  }
-  // @if ($responsiveType==1) {
-  //   [class*="container"] {
-  //     @if ($maxWidthContainer>0) {
-  //       max-width: toRem($containerWidth);
-  //       margin: 0 auto;
-  //     }
-  //     @if ($containerPadding>0) {
-  //       @if ($maxWidthContainer>0) {
-  //         padding: 0 toRem(math.div($containerPadding, 2));
-  //       } @else {
-  //         @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
-  //         @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
-  //       }
-  //     }
-  //   }
-  // } 
-  @import './null.scss';
 
+    .container {
+        max-width: toRem($containerWidth);
+        margin: 0 auto;
+
+        @if ($containerPadding > 0) {
+            padding: 0 toRem(math.div($containerPadding, 2));
+        }
+    }
+    .content {
+        flex: 1 1 auto;
+    }
+}
+// @if ($responsiveType==1) {
+//   [class*="container"] {
+//     @if ($maxWidthContainer>0) {
+//       max-width: toRem($containerWidth);
+//       margin: 0 auto;
+//     }
+//     @if ($containerPadding>0) {
+//       @if ($maxWidthContainer>0) {
+//         padding: 0 toRem(math.div($containerPadding, 2));
+//       } @else {
+//         @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+//         @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+//       }
+//     }
+//   }
+// }

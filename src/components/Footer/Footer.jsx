@@ -1,10 +1,26 @@
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+
+import style from "./Footer.module.scss";
+
 const Footer = () => {
     return (
         <footer>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            aliquid quaerat fuga architecto iusto nisi expedita voluptates, quia
-            minus molestias nulla temporibus repellendus enim cupiditate? Qui
-            praesentium sint perspiciatis vel.
+            <div className='container'>
+                <div className={style.footer}>
+                    <div>
+                        <Logo className={style.logo} />
+                    </div>
+                    <div>
+                        <nav className={style.menu}>
+                            <Link>Gallery</Link>
+                            <Link>About Spartisan</Link>
+                            <Link>Gift certificates</Link>
+                            <Link>Booking</Link>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </footer>
     );
 };
