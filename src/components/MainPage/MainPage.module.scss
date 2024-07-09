@@ -1,4 +1,6 @@
 .mainPage {
+    margin-top: 100px;
+    text-align: center;
     h3,
     h2 {
         font-weight: 400;
@@ -7,5 +9,22 @@
     }
     h2 {
         font-weight: 700;
+        text-transform: uppercase;
+    }
+    span {
+        margin: 20px 0;
+        display: inline-block;
+        position: relative;
+        width: 1px;
+        height: 140px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: #bca476;
+        }
     }
 }

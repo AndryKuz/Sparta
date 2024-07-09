@@ -8,6 +8,8 @@ $mainColor: #ffff;
 
 $fontSize: toRem(16);
 
+$fontWeight: 300;
+
 $fontFamily: "Montserrat";
 
 $minWidth: 320;
@@ -27,6 +29,7 @@ $responsiveType: 1;
 
 //          Wrapper
 .wrapper {
+    background: linear-gradient(to right, #101010 0%, #101010 100%);
     background-image: url("../images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,6 +38,10 @@ $responsiveType: 1;
     flex-direction: column;
     overflow: hidden;
 
+    main {
+        flex: 1 1 auto;
+    }
+
     .container {
         max-width: toRem($containerWidth);
         margin: 0 auto;
@@ -42,9 +49,6 @@ $responsiveType: 1;
         @if ($containerPadding > 0) {
             padding: 0 toRem(math.div($containerPadding, 2));
         }
-    }
-    .content {
-        flex: 1 1 auto;
     }
 }
 // @if ($responsiveType==1) {
