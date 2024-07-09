@@ -1,6 +1,15 @@
+.pageParent {
+    position: relative;
+    height: calc(100vh - 179px);
+}
 .mainPage {
-    margin-top: 100px;
+    width: 996px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+
     h3,
     h2 {
         font-weight: 400;
