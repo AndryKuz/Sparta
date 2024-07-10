@@ -7,7 +7,7 @@ const CartInfo = () => {
     const programData = nameButton.find((item) => item.id === 1);
 
     return (
-        <div>
+        <div className={style.cartProgram}>
             <div className={style.left}>
                 <h3>"Short pleasure"</h3>
                 <span></span>
@@ -17,11 +17,11 @@ const CartInfo = () => {
             </div>
             <div className={style.right}>
                 <h4>The program includes:</h4>
-                {programData.program.map(({ program, id }) => (
-                    <ul key={id}>
-                        <li>{program}</li>
-                    </ul>
-                ))}
+                <ul className={style.list}>
+                    {programData.program.map((item, i) => (
+                        <li key={i}>{item}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

@@ -1,7 +1,10 @@
 import { ReactComponent as Svg } from "../../assets/images/cart/short.svg";
-import CartInfo from "./CartInfo";
+
 import style from "./CartPrograms.module.scss";
+
 import ImageForCart from "./ImageForCart";
+import CartInfo from "./CartInfo";
+
 
 const CartPrograms = () => {
     return (

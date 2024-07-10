@@ -1,3 +1,9 @@
+.cartProgram {
+    display: flex;
+    column-gap: 80px;
+    padding: 50px;
+}
+
 .left {
     display: flex;
     flex-direction: column;
@@ -38,5 +44,23 @@
     .time {
         font-size: 17px;
         line-height: 30px;
+    }
+}
+
+.right {
+    padding: 10px;
+    h4 {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    .list {
+        li {
+            list-style: disc;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
     }
 }
