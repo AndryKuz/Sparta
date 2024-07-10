@@ -1,0 +1,24 @@
+.arrow {
+    display: inline-flex;
+    width: 49px;
+    border: 1px solid var(--gold);
+    position: relative;
+    &::after {
+        content: ">";
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        color: var(--gold);
+    }
+}
+
+.arrowLeft {
+    &::after {
+        transform: rotate(-180deg);
+        left: -7px;
+    }
+}
+
+.arrowRight {
+    border-color: transparent black transparent transparent;
+}
