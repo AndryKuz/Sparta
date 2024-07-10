@@ -1,5 +1,6 @@
 export const nameButton = [
     {
+        id: 1,
         title: "Short pleasure",
         price: 120,
         time: 120,
@@ -12,6 +13,7 @@ export const nameButton = [
         ],
     },
     {
+        id: 2,
         title: "Deep delight",
         price: 180,
         time: 120,
@@ -29,6 +31,7 @@ export const nameButton = [
         ],
     },
     {
+        id: 3,
         title: "Steam room",
         price: 120,
         time: 180,
@@ -44,6 +47,7 @@ export const nameButton = [
         ],
     },
     {
+        id: 4,
         title: "Your own bather",
         price: 120,
         time: 120,
@@ -57,6 +61,7 @@ export const nameButton = [
         ],
     },
     {
+        id: 5,
         title: "One on one",
         price: 120,
         program: [

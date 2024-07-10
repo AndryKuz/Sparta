@@ -1,9 +1,6 @@
 @use "sass:math";
-// @import url(./mixins.scss);
-@function toRem($px, $current: 16) {
-    $result: math.div($px, $current) + rem;
-    @return $result;
-}
+@use "./mixins" as *;
+
 $mainColor: #ffff;
 
 $fontSize: toRem(16);
@@ -25,8 +22,6 @@ $mobileSmall: em(479.98);
 
 $responsiveType: 1;
 
-@import "./null.scss";
-
 //          Wrapper
 .wrapper {
     background-image: url("../images/bg.png");
@@ -36,6 +31,7 @@ $responsiveType: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    max-width: $maxWidth;
 
     main {
         flex: 1 1 auto;

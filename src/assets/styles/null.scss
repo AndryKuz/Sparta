@@ -1,5 +1,4 @@
-@import "./variables.scss";
-
+@use "./global.scss" as *;
 * {
     padding: 0px;
     margin: 0px;
