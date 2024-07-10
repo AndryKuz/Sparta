@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 
 const Header = () => {
     return (
-        <section>
+        <section className={style.test}>
             <div className='container'>
                 <header>
                     <div className={style.header}>

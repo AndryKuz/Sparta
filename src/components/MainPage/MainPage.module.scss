@@ -2,7 +2,10 @@
 
 .pageParent {
     position: relative;
-    min-height: calc(100vh - 179px);
+    background-image: url("../../assets/images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 .mainPage {
     width: 996px;

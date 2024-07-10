@@ -1,7 +1,12 @@
 @use "sass:math";
-
-.header {
+.test {
+    position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     padding: 20px;
