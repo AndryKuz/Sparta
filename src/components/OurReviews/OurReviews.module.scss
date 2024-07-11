@@ -1,3 +1,5 @@
+@use "../../assets/styles/global.scss" as *;
+
 .ourReviews {
     margin-bottom: 60px;
     .title {
@@ -14,4 +16,7 @@
 
 .reviews {
     display: flex;
+    @media (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
 }

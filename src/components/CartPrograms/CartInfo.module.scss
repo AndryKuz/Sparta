@@ -1,7 +1,16 @@
+@use "../../assets/styles/global.scss" as *;
+
 .cartProgram {
     display: flex;
     column-gap: 80px;
     padding: 50px;
+    @media (max-width: 1080px) {
+        padding: 25px;
+        gap: 50px;
+    }
+    @media (max-width: $tablet) {
+        gap: 25px;
+    }
 }
 
 .left {
@@ -24,7 +33,7 @@
     span {
         position: relative;
         height: 2px;
-        width: 282px;
+        width: 100%;
         &::after {
             content: "";
             position: absolute;

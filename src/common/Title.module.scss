@@ -1,3 +1,4 @@
+@use "../assets/styles/global.scss" as *;
 .offers {
     display: flex;
     align-items: center;
@@ -10,13 +11,19 @@
             font-weight: 300;
             font-size: 60px;
             line-height: 73.14px;
+            @media (max-width: $tablet) {
+                font-size: 40px;
+            }
+            @media (max-width: $mobile) {
+                font-size: 30px;
+            }
         }
         h4 {
             font-weight: 700;
         }
     }
     span {
-        display: inline-block;
+        display: inline-flex;
         position: relative;
         width: 225px;
         height: 1px;
