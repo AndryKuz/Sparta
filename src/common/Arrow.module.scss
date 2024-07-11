@@ -1,24 +1,45 @@
-.arrow {
-    display: inline-flex;
-    width: 49px;
-    border: 1px solid var(--gold);
+// /* Arrow.module.scss */
+.arrowWrapper {
     position: relative;
-    &::after {
-        content: ">";
+    display: flex;
+    align-items: center;
+    .arrow {
+        z-index: 5;
+        width: 49px;
+        height: 1px;
+        background: var(--gold);
+    }
+    .icon {
+        z-index: 5;
         position: absolute;
-        top: -7px;
-        right: -7px;
-        color: var(--gold);
+        fill: var(--gold);
+    }
+    .circle {
+        position: absolute;
+        z-index: 3;
+        width: 32px;
+        height: 35px;
+        background-color: #1c1c1c;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
 .arrowLeft {
-    &::after {
-        transform: rotate(-180deg);
+    .icon {
         left: -7px;
+        transform: rotate(-180deg);
+    }
+    .circle {
+        left: -17px;
     }
 }
-
 .arrowRight {
-    border-color: transparent black transparent transparent;
+    .icon {
+        right: -7px;
+    }
+    .circle {
+        right: -17px;
+    }
 }
